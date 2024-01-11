@@ -1,0 +1,6 @@
+## UTF 8 Settings
+init-connect= SET NAMES utf8
+collation_server=utf8_general_ci
+character_set_server=utf8
+skip-character-set-client-handshake
+character_sets-dir="C:/xampp/mysql/share/charsets"
