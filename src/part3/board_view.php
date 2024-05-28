@@ -57,7 +57,7 @@
 						$file_size = filesize($file_path);
 
 						echo "▷ 첨부파일 : $file_name ($file_size Byte) &nbsp;&nbsp;&nbsp;&nbsp;
-			       		<a href='download.php?num=$num&real_name=$real_name&file_name=$file_name&file_type=$file_type'>[저장]</a><br><br>";
+			       		<a href='$file_path'>[저장]</a><br><br>";
 			           	}
 				?>
 				<?=$content?>
@@ -66,7 +66,7 @@
 	    <ul class="buttons">
 				<li><button onclick="location.href='board_list.php?page=<?=$page?>'">목록</button></li>
 				<li><button onclick="location.href='board_modify_form.php?num=<?=$num?>&page=<?=$page?>'">수정</button></li>
-				<li><button onclick="location.href='board_delete.php?num=<?=$num?>&page=<?=$page?>'">삭제</button></li>
+				<li><button onclick="location.href='board_temp.php?num=<?=$num?>&page=<?=$page?>'">삭제</button></li>
 				<li><button onclick="location.href='board_form.php'">글쓰기</button></li>
 		</ul>
 	</div> <!-- board_box -->
