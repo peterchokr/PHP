@@ -30,20 +30,12 @@ if ($total_record != 0)
        mysqli_data_seek($result, $i);
        // 가져올 레코드로 위치(포인터) 이동
        $row = mysqli_fetch_array($result);
-?>
-       <a href='javascript:sendid(<?= $row["id"]?>)'><?=$row["id"]?></a>(<?=$row["name"]?>)<br>;
-<?php
+       echo '<a href="javascript:sendid(\''. $row["id"].'\')">'.$row["id"]."</a>"."(".$row["name"].")"."<br>";
     }
 
 }
 
-
 //3. DB 연결 해제
 mysqli_close($con);
-
-
-
-
 ?>
 </body>
-</html>
