@@ -491,7 +491,7 @@ DELETE FROM students WHERE id = 1;
 
 ---
 
-수고했습니다.   
-조정현 교수(peterchokr@gmail.com)  영남이공대학교
+수고했습니다.
+조정현 교수(peterchokr@gmail.com)     영남이공대학교
 
 이 수업자료는 Claude와 Gemini를 이용하여 제작되었습니다.
