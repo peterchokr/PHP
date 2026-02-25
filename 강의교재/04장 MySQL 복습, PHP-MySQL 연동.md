@@ -21,6 +21,7 @@
 ### 1-1 데이터베이스와 테이블의 개념
 
 **데이터베이스?** 데이터를 체계적으로 저장하는 공간입니다.
+
 **테이블?** 데이터베이스 안의 표 형태의 데이터 저장소입니다.
 
 ```sql
@@ -493,8 +494,6 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ---
 
----
-
 ## ✅ 퀴즈/과제
 
 #### **과제 1: 기본 SQL 쿼리 작성**
@@ -550,7 +549,7 @@ $students = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
 ---
 
-수고했습니다.
+수고했습니다.   
+조정현 교수(peterchokr@gmail.com)     영남이공대학교
 
-조정현 교수(peterchokr@gmail.com)
-영남이공대학교
+이 수업자료는 Claude와 Gemini를 이용하여 제작되었습니다.

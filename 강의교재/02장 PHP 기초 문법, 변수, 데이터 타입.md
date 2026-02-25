@@ -192,29 +192,29 @@ var_dump($name, $age, $email);
             margin: 30px auto;
             padding: 20px;
         }
-      
+  
         .container {
             background: white;
             padding: 30px;
             border: 1px solid #ddd;
         }
-      
+  
         h1 {
             color: navy;
         }
-      
+  
         .section {
             margin: 20px 0;
             padding: 15px;
             background-color: #f9f9f9;
             border-left: 4px solid #2196F3;
         }
-      
+  
         .section h2 {
             margin-top: 0;
             color: #2196F3;
         }
-      
+  
         .code-output {
             background-color: #f0f0f0;
             padding: 10px;
@@ -253,7 +253,7 @@ var_dump($name, $age, $email);
         $title = "PHP 학습";
         $version = 8.0;
         $is_fun = true;
-      
+  
         echo "제목: " . $title . "<br>";
         echo "버전: " . $version . "<br>";
         echo "재미있나요? " . ($is_fun ? "네!" : "아니오") . "<br>";
@@ -270,7 +270,7 @@ var_dump($name, $age, $email);
             $name = "홍길동";
             $height = 180.5;
             $is_student = true;
-          
+    
             var_dump($age);
             var_dump($name);
             var_dump($height);
@@ -388,10 +388,10 @@ if (isset($user_name)) {
 // ============================================
 
 $temp = "임시 데이터";
-var_dump($temp);  // string(10) "임시 데이터"
+var_dump($temp);  // string(16) "임시 데이터"
 
 unset($temp);     // 변수 삭제
-var_dump($temp);  // ❌ Notice: Undefined variable
+var_dump($temp);  // ❌ Warning: Undefined variable
 
 ?>
 ```
@@ -489,41 +489,41 @@ const COURSE_CODE = 'CS201';
             margin: 30px auto;
             padding: 20px;
         }
-      
+  
         .container {
             background: white;
             padding: 30px;
             border: 1px solid #ddd;
         }
-      
+  
         h1 {
             color: navy;
         }
-      
+  
         .info-box {
             margin: 20px 0;
             padding: 15px;
             background-color: #e3f2fd;
             border-left: 4px solid #2196F3;
         }
-      
+  
         .info-box h2 {
             margin-top: 0;
             color: #1976D2;
         }
-      
+  
         table {
             width: 100%;
             border-collapse: collapse;
             margin: 15px 0;
         }
-      
+  
         th, td {
             padding: 10px;
             border: 1px solid #ddd;
             text-align: left;
         }
-      
+  
         th {
             background-color: #f5f5f5;
             font-weight: bold;
@@ -568,7 +568,7 @@ const COURSE_CODE = 'CS201';
         $student_age = 20;
         $gpa = 3.85;
         $is_honor_student = true;
-      
+  
         ?>
         <table>
             <tr>
@@ -611,13 +611,13 @@ const COURSE_CODE = 'CS201';
         <?php
         $flexible = 100;
         echo "초기값: " . $flexible . " (타입: " . gettype($flexible) . ")<br>";
-      
+  
         $flexible = "Hello";
         echo "변경: " . $flexible . " (타입: " . gettype($flexible) . ")<br>";
-      
+  
         $flexible = 3.14;
         echo "변경: " . $flexible . " (타입: " . gettype($flexible) . ")<br>";
-      
+  
         $flexible = true;
         echo "변경: " . $flexible . " (타입: " . gettype($flexible) . ")<br>";
         ?>
@@ -866,62 +866,25 @@ if (!isset($result)) {
 ?>
 ```
 
-#### **Object (객체)**
-
-```php
-<?php
-
-// ============================================
-// 7️⃣ Object - 클래스의 인스턴스
-// ============================================
-
-class Car {
-    public $brand;
-    public $color;
-  
-    public function __construct($brand, $color) {
-        $this->brand = $brand;
-        $this->color = $color;
-    }
-  
-    public function getInfo() {
-        return "Brand: " . $this->brand . ", Color: " . $this->color;
-    }
-}
-
-// 객체 생성
-$my_car = new Car("Hyundai", "black");
-
-// 속성 접근
-echo $my_car->brand;    // Hyundai
-echo $my_car->color;    // black
-
-// 메서드 호출
-echo $my_car->getInfo();
-
-?>
-```
-
 ### 3-2 타입 확인 및 변환
 
 ```php
 <?php
-
 // ============================================
 // gettype() - 변수의 타입 확인
 // ============================================
 
 $value = 42;
-echo gettype($value);   // integer
+echo gettype($value)."<br>";   // integer
 
 $value = "hello";
-echo gettype($value);   // string
+echo gettype($value)."<br>";   // string
 
 $value = 3.14;
-echo gettype($value);   // double
+echo gettype($value)."<br>";   // double
 
 $value = true;
-echo gettype($value);   // boolean
+echo gettype($value)."<br>";   // boolean
 
 // ============================================
 // is_*() 함수들 - 타입 판별
@@ -941,7 +904,7 @@ is_null($number);       // false
 
 $value = "123";
 settype($value, "integer");
-echo gettype($value);   // integer
+echo gettype($value)."<br>";   // integer
 echo $value;            // 123
 
 // ============================================
@@ -958,7 +921,6 @@ $value = 1;
 $string = (string)$value;           // "1" (string)
 
 $array = (array)"hello";            // Array (배열로 변환)
-
 ?>
 ```
 
@@ -990,29 +952,29 @@ $array = (array)"hello";            // Array (배열로 변환)
             margin: 30px auto;
             padding: 20px;
         }
-      
+  
         .container {
             background: white;
             padding: 30px;
             border: 1px solid #ddd;
         }
-      
+  
         h1 {
             color: navy;
         }
-      
+  
         .type-group {
             margin: 20px 0;
             padding: 15px;
             background-color: #f9f9f9;
             border-left: 4px solid #2196F3;
         }
-      
+  
         .type-group h2 {
             color: #2196F3;
             margin-top: 0;
         }
-      
+  
         .data-row {
             display: flex;
             margin: 10px 0;
@@ -1020,24 +982,24 @@ $array = (array)"hello";            // Array (배열로 변환)
             background-color: #fff;
             border: 1px solid #eee;
         }
-      
+  
         .data-label {
             flex: 1;
             font-weight: bold;
             color: #333;
         }
-      
+  
         .data-value {
             flex: 2;
             color: #666;
         }
-      
+  
         .data-type {
             flex: 1;
             color: #2196F3;
             font-family: monospace;
         }
-      
+  
         .code-output {
             background-color: #f0f0f0;
             padding: 10px;
@@ -1312,7 +1274,7 @@ if ($age === 20) {
 ### 4-3 논리 연산자
 
 ```php
-<?php
+?php
 
 // ============================================
 // 논리 연산자
@@ -1340,20 +1302,6 @@ $is_logged_in = false;
 if (!$is_logged_in) {
     echo "로그인하세요<br>";
 }
-
-// ============================================
-// && vs and, || vs or
-// ============================================
-
-// && 와 and는 거의 같지만 우선순위가 다름
-$x = true && false;     // false
-$y = true and false;    // true (and의 우선순위가 낮음)
-
-// || 와 or도 마찬가지
-$a = true || false;     // true
-$b = true or false;     // true
-
-// ✅ 권장: && 와 || 사용
 
 ?>
 ```
@@ -1383,221 +1331,6 @@ echo $text;         // Hello World
 ?>
 ```
 
-### 4-5 실습 예제: 간단한 계산기
-
-**파일명: `calculator.php`**
-
-```php
-<?php
-/**
- * calculator.php - 간단한 계산기
- * 
- * 역할:
- * 1. 사용자로부터 두 수와 연산자 입력받기
- * 2. 연산 수행
- * 3. 결과 출력
- */
-
-// ============================================
-// 핵심: 입력 데이터 초기화
-// ============================================
-
-$num1 = isset($_POST['num1']) ? floatval($_POST['num1']) : 0;
-$num2 = isset($_POST['num2']) ? floatval($_POST['num2']) : 0;
-$operator = isset($_POST['operator']) ? $_POST['operator'] : '+';
-$result = null;
-$error = '';
-
-// ============================================
-// 핵심: 연산 수행
-// ============================================
-
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && $num1 !== 0 && $num2 !== 0) {
-    switch ($operator) {
-        case '+':
-            $result = $num1 + $num2;
-            break;
-        case '-':
-            $result = $num1 - $num2;
-            break;
-        case '*':
-            $result = $num1 * $num2;
-            break;
-        case '/':
-            if ($num2 == 0) {
-                $error = "❌ 오류: 0으로 나눌 수 없습니다!";
-            } else {
-                $result = $num1 / $num2;
-            }
-            break;
-        default:
-            $error = "❌ 오류: 올바른 연산자를 선택하세요!";
-    }
-}
-
-?>
-
-<!DOCTYPE html>
-<html>
-<head>
-    <title>계산기</title>
-    <style>
-        body {
-            font-family: '맑은 고딕', sans-serif;
-            max-width: 500px;
-            margin: 50px auto;
-            padding: 20px;
-        }
-      
-        .calculator {
-            background: white;
-            padding: 30px;
-            border: 1px solid #ddd;
-        }
-      
-        h1 {
-            text-align: center;
-            color: navy;
-        }
-      
-        .form-group {
-            margin: 15px 0;
-        }
-      
-        label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-        }
-      
-        input[type="number"],
-        select {
-            width: 100%;
-            padding: 8px;
-            border: 1px solid #ddd;
-            box-sizing: border-box;
-        }
-      
-        .button-group {
-            display: flex;
-            gap: 10px;
-            margin-top: 20px;
-        }
-      
-        button {
-            flex: 1;
-            padding: 10px;
-            background-color: navy;
-            color: white;
-            border: none;
-            cursor: pointer;
-        }
-      
-        .result-box {
-            margin-top: 20px;
-            padding: 15px;
-            background-color: #e3f2fd;
-            border-left: 4px solid navy;
-            text-align: center;
-        }
-      
-        .result-label {
-            color: #666;
-            font-size: 14px;
-        }
-      
-        .result-value {
-            color: navy;
-            font-size: 32px;
-            font-weight: bold;
-            margin-top: 10px;
-        }
-      
-        .error {
-            background-color: #ffebee;
-            color: #c62828;
-            padding: 12px;
-            border-left: 4px solid #c62828;
-            margin-top: 10px;
-        }
-    </style>
-</head>
-<body>
-
-<div class="calculator">
-    <h1>🧮 계산기</h1>
-  
-    <form method="POST">
-        <!-- 첫 번째 숫자 -->
-        <div class="form-group">
-            <label for="num1">첫 번째 숫자:</label>
-            <input type="number" id="num1" name="num1" step="0.01" 
-                   value="<?php echo $num1 !== 0 ? $num1 : ''; ?>" required>
-        </div>
-      
-        <!-- 연산자 선택 -->
-        <div class="form-group">
-            <label for="operator">연산자:</label>
-            <select id="operator" name="operator">
-                <option value="+" <?php echo $operator === '+' ? 'selected' : ''; ?>>더하기 (+)</option>
-                <option value="-" <?php echo $operator === '-' ? 'selected' : ''; ?>>빼기 (-)</option>
-                <option value="*" <?php echo $operator === '*' ? 'selected' : ''; ?>>곱하기 (*)</option>
-                <option value="/" <?php echo $operator === '/' ? 'selected' : ''; ?>>나누기 (/)</option>
-            </select>
-        </div>
-      
-        <!-- 두 번째 숫자 -->
-        <div class="form-group">
-            <label for="num2">두 번째 숫자:</label>
-            <input type="number" id="num2" name="num2" step="0.01" 
-                   value="<?php echo $num2 !== 0 ? $num2 : ''; ?>" required>
-        </div>
-      
-        <!-- 버튼 -->
-        <div class="button-group">
-            <button type="submit">계산하기</button>
-            <button type="reset">초기화</button>
-        </div>
-    </form>
-  
-    <!-- 결과 표시 -->
-    <?php if ($result !== null && !$error): ?>
-    <div class="result-box">
-        <div class="result-label">
-            <?php echo $num1 . " " . $operator . " " . $num2; ?>
-        </div>
-        <div class="result-value">
-            <?php 
-            // 결과를 보기 좋게 포맷
-            if (is_float($result)) {
-                echo round($result, 2);  // 소수점 2자리
-            } else {
-                echo $result;
-            }
-            ?>
-        </div>
-    </div>
-    <?php endif; ?>
-  
-    <!-- 오류 메시지 -->
-    <?php if ($error): ?>
-    <div class="error">
-        <?php echo $error; ?>
-    </div>
-    <?php endif; ?>
-</div>
-
-</body>
-</html>
-```
-
-**이 파일을 `http://localhost/calculator.php`로 실행하면:**
-
-- 두 수와 연산자를 입력받는 폼 표시
-- 선택한 연산 수행
-- 결과 계산 및 표시 ✅
-- 0으로 나누기 오류 처리 ✅
-
 ---
 
 ## ✅ 퀴즈/과제
@@ -1620,29 +1353,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && $num1 !== 0 && $num2 !== 0) {
    - 정수를 문자열로 변환
    - 실수를 정수로 변환
 
-#### **과제 2: 계산기 프로그램 확장**
-
-위의 calculator.php를 다음과 같이 확장하세요:
-
-1. **추가 연산자 구현**
-
-   - 거듭제곱 (**)
-   - 나머지 (%)
-2. **입력 유효성 검사**
-
-   - 입력값이 숫자인지 확인
-   - 빈 값 검사
-3. **결과 포맷팅**
-
-   - 소수점 2자리까지만 표시
-   - 음수는 빨간색으로 표시
-4. **계산 이력 표시**
-
-   - 이전 계산 결과를 테이블로 표시 (세션 또는 배열 사용)
-
 ---
 
-수고했습니다.
+수고했습니다.   
+조정현 교수(peterchokr@gmail.com)     영남이공대학교
 
-조정현 교수(peterchokr@gmail.com)
-영남이공대학교
+이 수업자료는 Claude와 Gemini를 이용하여 제작되었습니다.

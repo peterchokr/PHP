@@ -895,67 +895,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ---
 
-## 7️⃣ 주요 개념 정리
-
-### 7-1 폼 처리 기본 패턴
-
-```php
-<?php
-
-// 1단계: 폼 제출 확인
-if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-  
-    // 2단계: 데이터 검증
-    $errors = array();
-  
-    if (empty($_POST['field1'])) {
-        $errors[] = "필드1은 필수입니다";
-    }
-  
-    if (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-        $errors[] = "이메일 형식이 잘못되었습니다";
-    }
-  
-    // 3단계: 검증 통과 시 처리
-    if (count($errors) === 0) {
-        $data1 = htmlspecialchars($_POST['field1']);
-        $data2 = htmlspecialchars($_POST['field2']);
-  
-        // 데이터 처리 (저장, 수정, 삭제 등)
-        echo "처리되었습니다";
-    } else {
-        // 오류 표시
-        foreach ($errors as $error) {
-            echo $error . "<br>";
-        }
-    }
-}
-
-?>
-```
-
-### 7-2 검증 함수 정리
-
-```php
-<?php
-
-// 필드 확인
-isset($_POST['field']);      // 필드가 존재하는가?
-empty($_POST['field']);      // 필드가 비어있는가?
-
-// 문자열 검증
-strlen($str) >= 5;           // 최소 길이 확인
-filter_var($email, FILTER_VALIDATE_EMAIL);  // 이메일 형식
-is_numeric($age);            // 숫자인가?
-
-// 출력 안전화
-htmlspecialchars($data);     // HTML 특수문자 변환
-
-?>
-```
-
----
-
 ## ✅ 퀴즈/과제
 
 #### **과제 1: GET과 POST 사용 구분**
@@ -1012,7 +951,7 @@ htmlspecialchars($data);     // HTML 특수문자 변환
 
 ---
 
-수고했습니다.
+수고했습니다.   
+조정현 교수(peterchokr@gmail.com)     영남이공대학교
 
-조정현 교수(peterchokr@gmail.com)
-영남이공대학교
+이 수업자료는 Claude와 Gemini를 이용하여 제작되었습니다.
