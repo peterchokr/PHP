@@ -420,7 +420,7 @@ echo MAX_FILE_SIZE . "<br>";  // 10485760
 // ✅ $ 기호 사용 안 함
 echo SITE_NAME;       // ✅ 가능
 
-// ✅ 재정의 불가 (define의 4번째 인자가 false일 때)
+// ✅ 재정의 불가 (define의 3번째 인자가 false일 때)
 define('FIXED_VALUE', 100, false);
 // FIXED_VALUE = 200;  // ❌ 오류!
 
