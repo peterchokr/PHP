@@ -52,11 +52,13 @@ CREATE TABLE students (
 ### 1-3 INSERT - 데이터 삽입
 
 ```sql
-INSERT INTO students (name, email, age, score)
-VALUES ('홍길동', 'hong@example.com', 20, 85);
-
-INSERT INTO students (name, email, age, score)
-VALUES ('김영희', 'kim@example.com', 21, 92);
+INSERT INTO students (name, email, age, score) VALUES ('홍지찬', 'hong@example.com', 20, 85);
+INSERT INTO students (name, email, age, score) VALUES ('김영희', 'kim@example.com', 21, 92);
+INSERT INTO students (name, email, age, score) VALUES ('이철수', 'lee@example.com', 22, 78);
+INSERT INTO students (name, email, age, score) VALUES ('박민지', 'park@example.com', 20, 95);
+INSERT INTO students (name, email, age, score) VALUES ('최수연', 'choi@example.com', 23, 88);
+INSERT INTO students (name, email, age, score) VALUES ('정우성', 'jung@example.com', 21, 82);
+INSERT INTO students (name, email, age, score) VALUES ('강지석', 'kang@example.com', 24, 91);
 ```
 
 ### 1-4 SELECT - 데이터 조회
