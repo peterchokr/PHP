@@ -392,7 +392,7 @@ $errors = array();
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   
     // 이름 필수 확인
-    if (empty($_POST['name'])) {
+    if (empty($_POST['username'])) {
         $errors[] = "이름을 입력하세요";
     }
   
