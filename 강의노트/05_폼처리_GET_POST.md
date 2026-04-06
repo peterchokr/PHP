@@ -487,46 +487,6 @@ JavaScript를 사용하여 폼 제출 전에 클라이언트 측에서 검증하
         .error { color: red; font-size: 12px; margin-top: 3px; display: none; }
         .success { color: green; padding: 10px; background: #e8f5e9; display: none; margin-top: 20px; }
     </style>
-</head>
-<body>
-
-<h2>📝 학생 등록</h2>
-
-<form id="registerForm">
-    <div class="form-group">
-        <label>이름 *</label>
-        <input type="text" id="name" name="name" placeholder="2자 이상 20자 이하">
-        <div class="error" id="nameError"></div>
-    </div>
-  
-    <div class="form-group">
-        <label>이메일 *</label>
-        <input type="text" id="email" name="email" placeholder="예: student@example.com">
-        <div class="error" id="emailError"></div>
-    </div>
-  
-    <div class="form-group">
-        <label>나이 *</label>
-        <input type="number" id="age" name="age" placeholder="0~150">
-        <div class="error" id="ageError"></div>
-    </div>
-  
-    <div class="form-group">
-        <label>성적 *</label>
-        <input type="number" id="score" name="score" placeholder="0~100" min="0" max="100">
-        <div class="error" id="scoreError"></div>
-    </div>
-  
-    <div class="form-group">
-        <label>자기소개</label>
-        <textarea id="comment" name="comment" rows="4" placeholder="선택사항 (최대 500자)"></textarea>
-        <div class="error" id="commentError"></div>
-    </div>
-  
-    <button type="submit">등록하기</button>
-  
-    <div class="success" id="successMessage">✅ 등록되었습니다!</div>
-</form>
 <script>
 // ============================================
 // JavaScript 폼 검증 함수
@@ -650,6 +610,46 @@ document.getElementById('registerForm').addEventListener('submit', function(e) {
     }
 });
 </script>
+</head>
+<body>
+
+<h2>📝 학생 등록</h2>
+
+<form id="registerForm">
+    <div class="form-group">
+        <label>이름 *</label>
+        <input type="text" id="name" name="name" placeholder="2자 이상 20자 이하">
+        <div class="error" id="nameError"></div>
+    </div>
+  
+    <div class="form-group">
+        <label>이메일 *</label>
+        <input type="text" id="email" name="email" placeholder="예: student@example.com">
+        <div class="error" id="emailError"></div>
+    </div>
+  
+    <div class="form-group">
+        <label>나이 *</label>
+        <input type="number" id="age" name="age" placeholder="0~150">
+        <div class="error" id="ageError"></div>
+    </div>
+  
+    <div class="form-group">
+        <label>성적 *</label>
+        <input type="number" id="score" name="score" placeholder="0~100" min="0" max="100">
+        <div class="error" id="scoreError"></div>
+    </div>
+  
+    <div class="form-group">
+        <label>자기소개</label>
+        <textarea id="comment" name="comment" rows="4" placeholder="선택사항 (최대 500자)"></textarea>
+        <div class="error" id="commentError"></div>
+    </div>
+  
+    <button type="submit">등록하기</button>
+  
+    <div class="success" id="successMessage">✅ 등록되었습니다!</div>
+</form>
 </body>
 </html>
 ```
