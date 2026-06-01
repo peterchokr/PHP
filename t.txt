@@ -1,0 +1,16 @@
+function checkMimeSimple($tmpPath) {
+    return mime_content_type($tmpPath);  // 예: "image/png"
+}
+
+$allowedMimes = ['image/jpeg', 'image/png', 'application/pdf'];
+
+if (isset($_FILES['stphoto'])) {
+    $tmpPath  = $_FILES['stphoto']['tmp_name'];
+    $mimeType = checkMimeSimple($tmpPath);
+
+    if (in_array($mimeType, $allowedMimes)) {
+        echo "✅ MIME 허용: " . htmlspecialchars($mimeType);
+    } else {
+        echo "❌ MIME 거부: " . htmlspecialchars($mimeType);
+    }
+}
