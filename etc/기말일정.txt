@@ -1,7 +1,54 @@
 필기시험없음
 
 08.종합프로젝트 완성
+
 (1) TODO   
+
+전체 서비스 시작 페이지 : login.php
+
+4-1 TODO 상태 변경
+목표: 완료/미완료 상태를 토글하기
+
+해야할 일:
+
+toggle_todo.php 파일 생성
+list_todos.php의 각 TODO 항목에 상태 변경 버튼 추가
+POST 요청으로 toggle_todo.php에 TODO id 전송
+현재 상태를 조회한 후 반대 상태로 UPDATE
+UPDATE 완료 후 list_todos.php로 리다이렉트
+
+
+4-2 TODO 삭제하기
+목표: 확인 메시지 후 TODO 삭제
+
+해야할 일:
+
+delete_todo.php 파일 생성
+list_todos.php의 각 TODO 항목에 삭제 버튼 추가
+JavaScript confirm() 함수로 사용자에게 확인 메시지 표시
+GET 요청으로 delete_todo.php에 TODO id 전송
+DELETE 쿼리로 데이터 삭제 (WHERE 절에 id와 user_id 필수)
+삭제 완료 후 list_todos.php로 리다이렉트
+
+
+4-3 페이지네이션 (선택사항)
+목표: 1페이지에 5개의 TODO만 표시
+
+해야할 일:
+
+list_todos.php의 SELECT 쿼리에 LIMIT과 OFFSET 추가
+페이지 번호를 URL 파라미터로 받기 (?page=1)
+COUNT(*)로 전체 TODO 개수 조회
+전체 페이지 수 계산: ceil(총 개수 / 5)
+페이지 바닥에 "이전" "다음" 버튼 추가
+
+
+4-4. 로그인 화면에 '회원가입' 버튼 넣고 회원가입 기능 추가
+users 테이블 구조에 부합하는 회원가입을 만들어 사용자가 직접 회원으로 가입할 수 있도록 구현
+
+---------
+
+
 (2) 상품관리
 HTML + CSS + PHP + DB
 
